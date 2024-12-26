@@ -86,9 +86,7 @@ const Home = () => {
       />
       <div className="snap-container">
         <Element id="about" name="about" className="snap-section">
-          <About
-            scrollToSection={scrollToSection}
-          />
+          <About />
         </Element>
         <Element id="projects" name="projects" className="snap-section">
           <Projects

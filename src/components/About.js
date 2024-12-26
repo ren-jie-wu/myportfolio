@@ -3,13 +3,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import { name, positions, introduction, profilePic, cvLink, MarkdownRenderer } from "./Helper";
 
-const About = ({ scrollToSection }) => {
+const About = () => {
   return (
     <div className="about-section bg-white">
       <div className="text-center mb-4">
         <img
           src={profilePic}
-          alt={name}
+          alt={name.full}
           className="rounded-circle"
           style={{ width: "250px", height: "250px", objectFit: "cover" }}
         />
