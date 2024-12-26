@@ -2,7 +2,7 @@ import ReactMarkdown from 'react-markdown';
 
 // About Me Page Data
 const name = {"first": "Renjie", "last": "Wu", "full": "Renjie Wu"};
-const profilePic = "/images/me.jpg";
+const profilePic = `${process.env.PUBLIC_URL}/images/me.jpg`;
 const positions = "Machine Learning Engineer 🧑‍💻 | Biomedical AI Researcher 🧑‍🔬";
 const introduction = "---\n" +
                      "I'm particularly enthusiastic at bridging machine learning and biomedical research, and experienced with:\n\n" +
@@ -22,24 +22,24 @@ const projects = [
   {
     id: 1,
     title: "KGMem",
-    icon: "/images/kgmem.jpeg",
-    description: "Knowledge graph-based memory management web app.",
+    icon: `${process.env.PUBLIC_URL}/images/kgmem.jpeg`,
+    description: "Web application of memory assistant based on knowledge graph powered by LLM integration.",
     skills: ["React", "Flask", "Graph RAG", "Software Engineering"],
     details: "Details about KGMem...",
   },
   {
     id: 2,
     title: "GRN Inference",
-    icon: "/images/velogrn.jpeg",
-    description: "Deep learning model for RNA velocity and gene regulatory network inference.",
+    icon: `${process.env.PUBLIC_URL}/images/velogrn.jpeg`,
+    description: "Deep learning model for cell state transition prediction and gene regulatory network inference.",
     skills: ["PyTorch", "Graph Neural Network", "Attention Mechanism", "scRNA-seq", "RNA Velocity"],
     details: "Details about GRN...",
   },
   {
     id: 3,
     title: "Plasticity in CRC",
-    icon: "/images/crc.jpeg",
-    description: "Single-cell RNA-seq analysis of plasticity in colorectal cancer.",
+    icon: `${process.env.PUBLIC_URL}/images/crc.jpeg`,
+    description: "Single-cell RNA-seq analysis of plasticity in colorectal cancer within both patient and organoid data.",
     skills: ["scRNA-seq", "Seurat", "Trajectory Analysis", "Cancer Biology"],
     details: "Details about CRC...",
   }
