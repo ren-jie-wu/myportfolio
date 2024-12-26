@@ -20,7 +20,7 @@ const Projects = ({ handleDisplay, selectedProject }) => {
       </div>
       <div className="text-center mt-3">
         <a
-          href="/myportfolio/otherprojects"
+          href="/otherprojects"
           className="text-blue-600 hover:underline"
         >View More Projects →
         </a>

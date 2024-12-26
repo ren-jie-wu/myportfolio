@@ -5,7 +5,7 @@ const NavigationBar = ({ activeSection, scrollToSection, isMenuOpen, setIsMenuOp
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div className="container">
-        <a href="/myportfolio" className="navbar-brand" style={{ fontFamily: "Georgia" }}>
+        <a href="/" className="navbar-brand" style={{ fontFamily: "Georgia" }}>
           {name.full}
         </a>
         <button
