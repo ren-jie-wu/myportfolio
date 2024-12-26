@@ -54,7 +54,7 @@ const education = [
     location: "Beijing, China",
     time: "2020 - 2024",
     icon: "https://english.pku.edu.cn/Uploads/Bden/Picture/2021/10/18/s616d1156ea429_2412_1273_0_0.jpg",
-    gpa: "**Major GPA**: 3.8/4.0, ranking 1st in the major\n",
+    // gpa: "**Major GPA**: 3.8/4.0 （1st in the major）\n",
     courses: [
       {"name": "Data Structures and Algorithms", "grade": "98.5", skills: ["Python", "Data Structures", "Algorithms"]},
     ],
@@ -67,7 +67,7 @@ const education = [
     location: "Boston, MA",
     time: "2024 - 2026",
     icon: "https://www.harvard.edu/media-relations/wp-content/uploads/sites/3/2024/03/102423_Features_SM_34-scaled.jpg",
-    gpa: "**GPA**: 4.0/4.0\n"
+    // gpa: "**GPA**: 4.0/4.0\n",
   },
 ];
 
