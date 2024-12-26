@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.App {
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+}
+
+.snap-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 90%;
+  width: 100%;
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1, h2, h3 {
+  margin: 10px 0;
+  color: #333;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .nav-link {
+  cursor: pointer;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-collapse {
+  transition: height 0.3s ease-in-out;
+}
+
+.navbar-collapse:not(.show) {
+  height: 0 !important;
+  padding: 0;
+}
+
+.navbar-collapse.show {
+  height: auto;
+}
+
+.projects-gallery, .education-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+}
+
+.hover-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  width: 80%;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.skill-pill {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+}
+
+.card-body .btn {
+  color: white;
+  border-color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+
+.card:hover .hover-content, .btn {
+  opacity: 1;
+}
+
+.card .btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.contact-section .social-links a {
+  margin: 0 10px;
+}
+
+footer {
+  margin-bottom: 0;
+  font-size: 12px;
+  color: #666;
+}
