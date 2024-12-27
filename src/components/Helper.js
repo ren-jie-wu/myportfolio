@@ -10,7 +10,7 @@ const introduction = "---\n" +
                      "&nbsp;&nbsp;🤖 **Deep Learning Model Development** for biological pattern recognition  \n" +
                      "&nbsp;&nbsp;🕸️ **LLM Integrated Web App Development** to enhance biological research\n\n" +
                      "Let's code for a healthier world! ✨";
-const cvLink = "/files/cv.pdf";
+const cvLink = `${process.env.PUBLIC_URL}/files/cv.pdf`;
 
 // Contact Page Data
 const githublink = "https://github.com/vo-olb";

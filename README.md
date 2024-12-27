@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Instructions
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To visit my portfolio webpage, click [this link](https://vo-olb.github.io/myportfolio)
 
-## Available Scripts
+## Set up dependencies
+After cloning the repository, run
+``` {bash}
+npm install # or `yarn install`
+```
 
-In the project directory, you can run:
+## Host the website
+Refer to [this tutorial](https://github.com/gitname/react-gh-pages).
 
-### `yarn start`
+## To submit modification from local
+``` {bash}
+git add ./
+git commit -m "some comment"
+git push
+npm run deploy
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## What files to modify:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Metadata of the webpage
+Set `meta.content`, `title` in `public/index.html` as needed
 
-### `yarn test`
+### Website URL
+Set `homepage` in `package.json` (refer to the above gh tutorial)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Content
+Modify codes in `src/App.js`, `src/App.css`, `src/pages/*.js`, `src/components/*.js`, as well as images or other attached files in `public/`. If only the specific content needs modifying but not the framework, edit `src/components/Helper.js` and `public/{files, images}/*`
