@@ -20,17 +20,23 @@ const Home = () => {
       threshold: 0.5,
     });
     return (
-      <div
-        ref={ref}
-        className="fade-in"
-        style={{
-          '--delay': `${delay}s`,
-          opacity: inView ? 1 : 0,
-          transform: inView ? 'translateY(0)' : 'translateY(20px)'
-        }}
-      >
-        {children}
-      </div>
+      window.innerWidth > 768 ? (
+        <div
+          ref={ref}
+          className="fade-in"
+          style={{
+            '--delay': `${delay}s`,
+            opacity: inView ? 1 : 0,
+            transform: inView ? 'translateY(0)' : 'translateY(20px)'
+          }}
+        >
+          {children}
+        </div>
+      ) : (
+        <div>
+          {children}
+        </div>
+      )
     );
   };
 
