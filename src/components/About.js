@@ -5,7 +5,7 @@ import { name, positions, introduction, profilePic, cvLink, MarkdownRenderer } f
 
 const About = () => {
   return (
-    <div className="about-section bg-white">
+    <div className="about-section">
       <div className="text-center mb-4">
         <img
           src={profilePic}

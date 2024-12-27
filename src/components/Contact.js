@@ -24,7 +24,7 @@ const EmailIcon = () => (
 
 const Contact = () => {
   return (
-    <div className="contact-section bg-white">
+    <div className="contact-section">
       <div className="text-center mb-5">
         <h2 className="mb-4">Contact Me</h2>
         <MarkdownRenderer

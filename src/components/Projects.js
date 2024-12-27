@@ -4,7 +4,7 @@ import { projects } from "./Helper";
 
 const Projects = ({ handleDisplay, selectedProject }) => {
   return (
-    <div className="projects-section bg-white py-5">
+    <div className="projects-section py-5">
       <h2 className="text-center mb-4">Projects</h2>
       <div className="container">
         <div className="row justify-content-center">

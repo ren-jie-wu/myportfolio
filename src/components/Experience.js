@@ -4,7 +4,7 @@ import { education } from "./Helper";
 
 const Experience = ({ handleDisplay, selectedEducation }) => {
   return (
-    <div className="experience-section bg-white py-5">
+    <div className="experience-section py-5">
       <h2 className="text-center mb-4">Experience</h2>
       <div className="container">
         <div className="row justify-content-center">
