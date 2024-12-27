@@ -17,7 +17,7 @@ const Home = () => {
   const Section = ({ children, delay }) => {
     const [ref, inView] = useInView({
       triggerOnce: true,
-      threshold: 0.5,
+      threshold: 0.8,
     });
     return (
       window.innerWidth > 768 ? (
