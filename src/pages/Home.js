@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import { Element } from "react-scroll";
 import NavigationBar from "../components/NavigationBar";
 import About from "../components/About";
@@ -12,7 +13,26 @@ const Home = () => {
   // Define scrolling behavior
   const [activeSection, setActiveSection] = useState("about");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+
+  const Section = ({ children, delay }) => {
+    const [ref, inView] = useInView({
+      triggerOnce: true,
+      threshold: 0.5,
+    });
+    return (
+      <div
+        ref={ref}
+        className="fade-in"
+        style={{
+          '--delay': `${delay}s`,
+          opacity: inView ? 1 : 0,
+          transform: inView ? 'translateY(0)' : 'translateY(20px)'
+        }}
+      >
+        {children}
+      </div>
+    );
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -86,38 +106,49 @@ const Home = () => {
       />
       <div className="snap-container">
         <Element id="about" name="about" className="snap-section">
-          <About />
+          <Section>
+            <About />
+          </Section>
         </Element>
         <Element id="projects" name="projects" className="snap-section">
-          <Projects
-            handleDisplay={handleProjectDetails}
-            selectedProject={selectedProject}
-          />
+          <Section>
+            <Projects
+              handleDisplay={handleProjectDetails}
+              selectedProject={selectedProject}
+            />
+          </Section>
         </Element>
         {showProjectDetails && (
           <Element id="project-details" name="project-details" className="snap-section">
-            <ProjectDetails
-              selectedProject={selectedProject}
-              handleDisplay={handleProjectDetails}
-            />
+            <Section>
+              <ProjectDetails
+                selectedProject={selectedProject}
+                handleDisplay={handleProjectDetails}
+              />
+            </Section>
           </Element>
         )}
         <Element id="experience" name="experience" className="snap-section">
-          <Experience
-            handleDisplay={handleEducationDetails}
-            selectedEducation={selectedEducation}
-          />
-        </Element>
+          <Section>
+            <Experience
+              handleDisplay={handleEducationDetails}
+              selectedEducation={selectedEducation}
+            />
+          </Section></Element>
         {showEducationDetails && (
           <Element id="education-details" name="education-details" className="snap-section">
-            <EducationDetails
-              selectedEducation={selectedEducation}
-              handleDisplay={handleEducationDetails}
-            />
+            <Section>
+              <EducationDetails
+                selectedEducation={selectedEducation}
+                handleDisplay={handleEducationDetails}
+              />
+            </Section>
           </Element>
         )}
         <Element id="contact" name="contact" className="snap-section">
-          <Contact />
+          <Section>
+            <Contact />
+          </Section>
         </Element>
       </div>
     </div>
