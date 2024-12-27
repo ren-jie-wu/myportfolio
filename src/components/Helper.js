@@ -48,6 +48,16 @@ const projects = [
 const education = [
   {
     id: 1,
+    school: "Harvard University",
+    degree: "M.S. in Computational Biology",
+    dept: "School of Public Health",
+    location: "Boston, MA",
+    time: "2024 - 2026",
+    icon: "https://www.harvard.edu/media-relations/wp-content/uploads/sites/3/2024/03/102423_Features_SM_34-scaled.jpg",
+    // gpa: "**GPA**: 4.0/4.0\n",
+  },
+  {
+    id: 2,
     school: "Peking University",
     degree: "B.Eng. in Bioinformatics",
     dept: "School of Life Sciences",
@@ -58,16 +68,6 @@ const education = [
     courses: [
       {"name": "Data Structures and Algorithms", "grade": "98.5", skills: ["Python", "Data Structures", "Algorithms"]},
     ],
-  },
-  {
-    id: 2,
-    school: "Harvard University",
-    degree: "M.S. in Computational Biology",
-    dept: "School of Public Health",
-    location: "Boston, MA",
-    time: "2024 - 2026",
-    icon: "https://www.harvard.edu/media-relations/wp-content/uploads/sites/3/2024/03/102423_Features_SM_34-scaled.jpg",
-    // gpa: "**GPA**: 4.0/4.0\n",
   },
 ];
 

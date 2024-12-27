@@ -10,22 +10,19 @@ import ProjectDetails from "../components/ProjectDetails";
 import EducationDetails from "../components/EducationDetails";
 
 const Home = () => {
-  // Define scrolling behavior
-  const [activeSection, setActiveSection] = useState("about");
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const Section = ({ children, delay }) => {
+  // Define a section component with fade-in effect
+  const Section = ({ children, fadein=true }) => {
     const [ref, inView] = useInView({
       triggerOnce: true,
       threshold: 0.8,
     });
+
     return (
-      window.innerWidth > 768 ? (
+      fadein && window.innerWidth > 768 ? (
         <div
           ref={ref}
           className="fade-in"
           style={{
-            '--delay': `${delay}s`,
             opacity: inView ? 1 : 0,
             transform: inView ? 'translateY(0)' : 'translateY(20px)'
           }}
@@ -40,12 +37,24 @@ const Home = () => {
     );
   };
 
+  // Define scrolling behavior
+  const [activeSection, setActiveSection] = useState("about");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // Automatically detect active section to highlight in navigation bar
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
             setActiveSection(entry.target.id);
+          }
+          // Resume fade-in effect that were cancelled to avoid flickering when scrolling back
+          if (entry.intersectionRatio < 0.05 || !entry.isIntersecting) {
+            if (entry.target.id === "projects") {
+              setProjectFadeIn(true);
+            } else if (entry.target.id === "experience") {
+              setExperienceFadeIn(true);
+            }
           }
         });
       },
@@ -57,25 +66,29 @@ const Home = () => {
       sections.forEach((section) => observer.unobserve(section));
     };
   }, []);
-
+  // Scroll to a specific section; close the menu in mobile view window after scrolling
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
-    setActiveSection(id);
+    // setActiveSection(id); // Unnecessary because of observer
     setIsMenuOpen(false);
   };
 
   // Control details display for projects
   const [showProjectDetails, setShowProjectDetails] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [projectFadeIn, setProjectFadeIn] = useState(true);
   const handleProjectDetails = (project, more, fromback = false) => {
     if (more) {
+      setProjectFadeIn(false); // Cancel fade-in effect to avoid flickering
       setSelectedProject(project);
       setShowProjectDetails(true);
       setTimeout(() => scrollToSection("project-details"), 5); // In case next section hasn't been rendered yet
+      setProjectFadeIn(false);
     } else {
+      setProjectFadeIn(false); // Cancel fade-in effect to avoid flickering
       scrollToSection("projects");
       setTimeout(() => {
         setSelectedProject(null);
@@ -87,12 +100,15 @@ const Home = () => {
   // Same logic for education details
   const [showEducationDetails, setShowEducationDetails] = useState(false);
   const [selectedEducation, setSelectedEducation] = useState(null);
+  const [experienceFadeIn, setExperienceFadeIn] = useState(true);
   const handleEducationDetails = (education, more, fromback = false) => {
     if (more) {
+      setExperienceFadeIn(false);
       setSelectedEducation(education);
       setShowEducationDetails(true);
       setTimeout(() => scrollToSection("education-details"), 5);
     } else {
+      setExperienceFadeIn(false);
       scrollToSection("experience");
       setTimeout(() => {
         setSelectedEducation(null);
@@ -117,7 +133,7 @@ const Home = () => {
           </Section>
         </Element>
         <Element id="projects" name="projects" className="snap-section">
-          <Section>
+          <Section fadein={projectFadeIn} >
             <Projects
               handleDisplay={handleProjectDetails}
               selectedProject={selectedProject}
@@ -135,7 +151,7 @@ const Home = () => {
           </Element>
         )}
         <Element id="experience" name="experience" className="snap-section">
-          <Section>
+          <Section fadein={experienceFadeIn} >
             <Experience
               handleDisplay={handleEducationDetails}
               selectedEducation={selectedEducation}

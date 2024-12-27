@@ -48,14 +48,7 @@ html, body {
 }
 
 .fade-in {
-  opacity: 0; /* Start as invisible */
-  transform: translateY(20px); /* Initial position below */
   transition: opacity 1s ease, transform 1s ease; /* Smooth fade-in and move */
-}
-
-.fade-in.in-view {
-  opacity: 1; /* Fully visible */
-  transform: translateY(0); /* Move to original position */
 }
 
 h1, h2 {
