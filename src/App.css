@@ -221,3 +221,7 @@ footer {
   font-size: 12px;
   color: #666;
 }
+
+.d-flex {
+  flex-wrap: wrap;
+}

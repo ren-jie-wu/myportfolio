@@ -1,4 +1,5 @@
 import React from "react";
+import { MarkdownRenderer } from "./Helper";
 
 const ProjectCard = ({ project, handleDisplay, selectedProject }) => {
   return (
@@ -12,7 +13,7 @@ const ProjectCard = ({ project, handleDisplay, selectedProject }) => {
         />
         <div className="card-body">
           <h5 className="card-title text-center"><strong>{project.title}</strong></h5>
-          <p className="card-text">{project.description}</p>
+          <MarkdownRenderer markdownText={project.description} className="card-text" />
           <div className="hover-content">
             <div className="skills-container">
               {project.skills.map((skill, index) => (
