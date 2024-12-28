@@ -23,24 +23,39 @@ const projects = [
     id: 1,
     title: "KGMem",
     icon: `${process.env.PUBLIC_URL}/images/kgmem.jpeg`,
-    description: "Web application of memory assistant based on knowledge graph powered by LLM integration.",
-    skills: ["React", "Flask", "Graph RAG", "Software Engineering"],
-    details: "Details about KGMem...",
+    description: "Web application of AI assistant **Mem**orizing and retrieving **K**nowledge in form of **G**raphs.",
+    skills: ["Python/Flask", "JavaScript/React", "Graph RAG", "LLM API", "Full-Stack Development", "Project Management"],
+    github: "https://github.com/vo-olb/KGMem",
+    youtube: "https://youtu.be/bEEVs-A-M48",
+    summary: "This project tackles the challenge of managing numerous, fragmented knowledge by building a system that **organizes, queries, and visualizes knowledge as a connected graph**. Using LLM's API, Graph RAG techniques and interactive visualization tools, it transforms materials into **structured, searchable networks**, helping researchers and learners explore insights effectively.",
+    details: "#### Motivation\n" +
+             "As a bioscience researcher, how to **remember** overwhelming knowledge? How to **structurize and connect** these knowledge to discover new insights? How to **organize** what we've learned from different sources to **retrieve** them effectively? These are why the memory assistant KGMem comes in.\n" +
+             "#### Challenges and Solutions\n" +
+             "1. To categorize numerous knowledge from different sources, the app allows users to **manage different notebooks** containing their own sources or topics rather than all in one place, thus making the retrieval more efficient. This shares the same idea with [Google's NotebookLM](https://notebooklm.google), but step forward in using Graph RAG rather than normal RAG for knowledge storage and query.\n" +
+             "2. As mentioned in the motivation, sometimes **connected knowledge** can be more powerful to discover implicit relationships between concepts; and its **visualization** would make the process of understanding knowledge more fun and easy. Typical knowledge graphs such as [Neo4j](https://neo4j.com/labs/genai-ecosystem/llm-graph-builder/) conceptually do the same thing, but it uses a rather strict query language _Cypher_ undermining flexibility. Thus, this project seeks using LLM to **handle natural language query processing**, and using graph techniques to find memorized concepts that are **semantically or structurally ralated** to the queries. After research, Microsoft's [GraphRAG](https://github.com/microsoft/graphrag) turns out to be the solution and thus is integrated into the backend processing.\n" +
+             "#### Discussion: Success, Limitations, and Lessons Learned\n" +
+             "Discussion about KGMem...",
   },
   {
     id: 2,
     title: "GRN Inference",
     icon: `${process.env.PUBLIC_URL}/images/velogrn.jpeg`,
-    description: "Deep learning model for cell state transition prediction and gene regulatory network inference.",
+    description: "Deep learning model for cell fate prediction and **G**ene **R**egulatory **N**etwork **Inference**.",
     skills: ["PyTorch", "Graph Neural Network", "Attention Mechanism", "scRNA-seq", "RNA Velocity"],
+    github: "https://github.com/vo-olb/veloGRN",
+    youtube: null,
+    summary: "Summary about GRN...",
     details: "Details about GRN...",
   },
   {
     id: 3,
     title: "Plasticity in CRC",
     icon: `${process.env.PUBLIC_URL}/images/crc.jpeg`,
-    description: "Single-cell RNA-seq analysis of plasticity in colorectal cancer within both patient and organoid data.",
+    description: "Single-cell genomic data analysis of **Plasticity** within **C**olo**R**ectal **C**ancer.",
     skills: ["scRNA-seq", "Seurat", "Trajectory Analysis", "Cancer Biology"],
+    github: null,
+    youtube: null,
+    summary: "Summary about CRC...",
     details: "Details about CRC...",
   }
 ];
