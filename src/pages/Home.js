@@ -9,34 +9,32 @@ import Contact from "../components/Contact";
 import ProjectDetails from "../components/ProjectDetails";
 import EducationDetails from "../components/EducationDetails";
 
+const Section = ({ children, fadein=true }) => {
+  const [ref, inView] = useInView({
+    threshold: 0.2,
+  });
+
+  return (
+    fadein ? (
+      <div
+        ref={ref}
+        className="fade-in"
+        style={{
+          opacity: inView ? 1 : 0,
+          transform: inView ? 'translateY(0)' : 'translateY(20px)'
+        }}
+      >
+        {children}
+      </div>
+    ) : (
+      <div>
+        {children}
+      </div>
+    )
+  );
+};
+
 const Home = () => {
-  // Define a section component with fade-in effect
-  const Section = ({ children, fadein=true }) => {
-    const [ref, inView] = useInView({
-      triggerOnce: true,
-      threshold: 0.8,
-    });
-
-    return (
-      fadein && window.innerWidth > 768 ? (
-        <div
-          ref={ref}
-          className="fade-in"
-          style={{
-            opacity: inView ? 1 : 0,
-            transform: inView ? 'translateY(0)' : 'translateY(20px)'
-          }}
-        >
-          {children}
-        </div>
-      ) : (
-        <div>
-          {children}
-        </div>
-      )
-    );
-  };
-
   // Define scrolling behavior
   const [activeSection, setActiveSection] = useState("about");
   const [isMenuOpen, setIsMenuOpen] = useState(false);

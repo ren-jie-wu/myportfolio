@@ -22,6 +22,8 @@ const Projects = ({ handleDisplay, selectedProject }) => {
         <a
           href="/myportfolio/#/otherprojects"
           className="text-blue-600 hover:underline"
+          rel="noopener noreferrer"
+          target="_blank"
         >View More Projects →
         </a>
       </div>

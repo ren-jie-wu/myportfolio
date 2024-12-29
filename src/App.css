@@ -18,37 +18,27 @@ html, body {
 }
 
 .App {
-  scroll-snap-type: y mandatory;
   height: 100vh;
 }
 
 .snap-container {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
-  height: 90%;
-  width: 100%;
-}
-
-@media (max-width: 768px) {
-  .snap-container {
-    scroll-snap-type: none; /* Disable snap scrolling */
-    height: auto; /* Allow content to fit naturally */
-  }
+  height: 100%;
 }
 
 .snap-section {
   scroll-snap-align: start;
-  height: 100%;
-  width: 100%;
-  padding: 20px;
-  padding-top: 80px;
+  min-height: 100%;
+  padding: 60px;
+  padding-top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .fade-in {
-  transition: opacity 1s ease, transform 1s ease; /* Smooth fade-in and move */
+  transition: opacity 1.5s ease, transform 1.5s ease; /* Smooth fade-in and move */
 }
 
 h1, h2 {
