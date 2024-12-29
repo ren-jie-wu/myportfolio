@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { Element } from "react-scroll";
+import { ScrollIndicator } from "../components/Icons";
 import NavigationBar from "../components/NavigationBar";
 import About from "../components/About";
 import Projects from "../components/Projects";
@@ -9,7 +10,7 @@ import Contact from "../components/Contact";
 import ProjectDetails from "../components/ProjectDetails";
 import EducationDetails from "../components/EducationDetails";
 
-const Section = ({ children, fadein=true }) => {
+const Section = ({ children, fadein=true, isLastSection=false }) => {
   const [ref, inView] = useInView({
     threshold: 0.2,
   });
@@ -25,10 +26,12 @@ const Section = ({ children, fadein=true }) => {
         }}
       >
         {children}
+        {!isLastSection && <ScrollIndicator />}
       </div>
     ) : (
       <div>
         {children}
+        {!isLastSection && <ScrollIndicator />}
       </div>
     )
   );
@@ -151,7 +154,7 @@ const Home = () => {
           </Element>
         )}
         <Element id="contact" name="contact" className="snap-section">
-          <Section>
+          <Section isLastSection={true}>
             <Contact />
           </Section>
         </Element>
