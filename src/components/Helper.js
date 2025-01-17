@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 // About Me Page Data
 const name = {"first": "Renjie", "last": "Wu", "full": "Renjie Wu"};
 const profilePic = `${process.env.PUBLIC_URL}/images/me.jpg`;
-const positions = "Machine Learning Engineer 🧑‍💻 | Biomedical AI Researcher 🧑‍🔬";
+const positions = "ML Engineer | Data Scientist | AI Researcher";
 const introduction = "---\n" +
                      "I'm particularly enthusiastic at bridging machine learning and biomedical research, and experienced with:\n\n" +
                      "&nbsp;&nbsp;📊 **Clinical Data Analyses** using state-of-the-art machine learning models  \n" +
