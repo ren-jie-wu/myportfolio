@@ -13,7 +13,7 @@ const introduction = "---\n" +
 const cvLink = `${process.env.PUBLIC_URL}/files/cv.pdf`;
 
 // Contact Page Data
-const githublink = "https://github.com/vo-olb";
+const githublink = "https://github.com/ren-jie-wu";
 const linkedinlink = "https://www.linkedin.com/in/renjie-wu-334199325/";
 const email = "renjiewu@mit.edu";
 
@@ -25,7 +25,7 @@ const projects = [
     icon: `${process.env.PUBLIC_URL}/images/kgmem.jpeg`,
     description: "A web application for AI-assisted **Mem**orization and retrieval of **K**nowledge in the form of **G**raphs.",
     skills: ["Python/Flask", "JavaScript/React", "Graph RAG", "LLM API", "Full-Stack Development", "Project Management"],
-    github: "https://github.com/vo-olb/KGMem",
+    github: "https://github.com/ren-jie-wu/KGMem",
     youtube: "https://youtu.be/bEEVs-A-M48",
     summary: "This project addresses the challenge of managing fragmented knowledge by building a system that **organizes, queries, and visualizes knowledge as connected graphs**. By integrating LLM APIs, GraphRAG techniques, and interactive visualization tools, KGMem transforms materials into **searchable, structured networks** — empowering researchers and learners to explore insights effectively.",
     details: "#### Motivation\n" +
@@ -44,7 +44,7 @@ const projects = [
     icon: `${process.env.PUBLIC_URL}/images/velogrn.jpeg`,
     description: "Deep learning model for cell fate prediction and **G**ene **R**egulatory **N**etwork **Inference**.",
     skills: ["PyTorch", "Graph Neural Network", "Attention Mechanism", "scRNA-seq", "RNA Velocity"],
-    github: "https://github.com/vo-olb/veloGRN",
+    github: "https://github.com/ren-jie-wu/veloGRN",
     youtube: null,
     summary: "Summary about GRN...",
     details: "Details about GRN...",

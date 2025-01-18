@@ -1,6 +1,6 @@
 # Instructions
 
-To visit my portfolio webpage, click [this link](https://vo-olb.github.io/myportfolio)
+To visit my portfolio webpage, click [this link](https://ren-jie-wu.github.io/myportfolio)
 
 ## Set up dependencies
 After cloning the repository, run
