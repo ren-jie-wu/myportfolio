@@ -1,21 +1,23 @@
 import ReactMarkdown from 'react-markdown';
 
 // About Me Page Data
-const name = {"first": "Renjie", "last": "Wu", "full": "Renjie Wu"};
+const name = { first: "Renjie", last: "Wu", full: "Renjie Wu" };
 const profilePic = `${process.env.PUBLIC_URL}/images/me.jpg`;
-const positions = "ML Engineer | Data Scientist | AI Researcher";
-const introduction = "---\n" +
-                     "I'm particularly enthusiastic at bridging machine learning and biomedical research, and experienced with:\n\n" +
-                     "&nbsp;&nbsp;📊 **Clinical Data Analyses** using state-of-the-art machine learning models  \n" +
-                     "&nbsp;&nbsp;🤖 **Deep Learning Model Development** for biological pattern recognition  \n" +
-                     "&nbsp;&nbsp;🕸️ **LLM Integrated Web App Development** to enhance biological research\n\n" +
-                     "Let's code for a healthier world! ✨";
-const cvLink = `${process.env.PUBLIC_URL}/files/cv.pdf`;
+
+const subheadline = "AI for Biology · Representation Learning · Single-cell Multi-omics";
+
+const introduction =
+  "I’m a Master’s student in Computational Biology at Harvard T.H. Chan School of Public Health. I’m currently a Graduate Researcher at Mass General Hospital, advised by Dr. Luca Pinello.\n\n" +
+  "I'm interested in representation learning across biological modalities, with a focus on developing computational methods for single-cell and multi-omic data. I’m excited about turning high-dimensional, noisy biological signals into actionable insights for biomedical research—and ultimately, healthcare impact.\n\n" +
+  "Let’s code for a healthier world! ✨";
+
+const cvLink = `${process.env.PUBLIC_URL}/files/cv_ml4bio_drugdiscovery_202602.pdf`;
+
 
 // Contact Page Data
 const githublink = "https://github.com/ren-jie-wu";
 const linkedinlink = "https://www.linkedin.com/in/renjie-wu-334199325/";
-const email = "renjiewu@mit.edu";
+const email = "renjiewu02@gmail.com";
 
 // Projects and Experience Data
 const projects = [
@@ -104,4 +106,4 @@ const MarkdownRenderer = ({ markdownText }) => {
   );
 };
 
-export { name, positions, introduction, githublink, linkedinlink, email, profilePic, cvLink, sections, projects, education, MarkdownRenderer };
+export { name, subheadline, introduction, githublink, linkedinlink, email, profilePic, cvLink, sections, projects, education, MarkdownRenderer };
