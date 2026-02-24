@@ -7,9 +7,11 @@ const About = () => {
   return (
     <div className="about-section">
       <div className="about-inner">
-
+        {/* top: name and resume button, subheadline, avatar */}
         <div className="row align-items-center g-4">
+          {/* top left */}
           <div className="col-12 col-md-8">
+            {/* name and resume button */}
             <div
               style={{
                 display: "grid",
@@ -19,10 +21,11 @@ const About = () => {
                 alignItems: "center",
               }}
             >
-
+              {/* name */}
               <h1 className="m-0" style={{ fontWeight: "bold" }}>
-                Hi, I’m {name.first}
+                Hi, I'm {name.first}
               </h1>
+              {/* resume button */}
               <a
                 href={cvLink}
                 className="btn border-primary text-primary"
@@ -35,7 +38,8 @@ const About = () => {
             </div>
             
             <div style={{ height: "16px" }} />
-
+            
+            {/* subheadline */}
             <h3 
               className="m-0"
               style={{
@@ -48,6 +52,7 @@ const About = () => {
             </h3>
           </div>
 
+          {/* top right: avatar */}
           <div className="col-12 col-md-4 text-md-end">
             <img
               src={profilePic}
@@ -64,6 +69,7 @@ const About = () => {
 
         <div style={{ height: "16px" }} />
 
+        {/* bottom: introduction */}
         <div className="mt-4">
           <MarkdownRenderer className="text-left" markdownText={introduction} />
         </div>

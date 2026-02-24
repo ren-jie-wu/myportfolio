@@ -250,3 +250,36 @@ footer {
   margin: 0 auto;
   padding: 0 16px;
 }
+
+/* 固定参数：你可以改成 300/320/340 */
+:root{
+  --card-w: 320px;
+  --card-gap: 24px;
+}
+
+/* 外层：限制一行最多 4 个 card */
+.projects-grid-wrap{
+  width: 100%;
+  margin: 0 auto;
+  /* 4 张卡 + 3 个 gap 的最大宽度 */
+  max-width: calc(var(--card-w) * 4 + var(--card-gap) * 3);
+}
+
+/* 内层：自动换行，居中排列 */
+.projects-grid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--card-gap);
+}
+
+/* 每个卡片占位固定宽度 */
+.project-card-col{
+  width: var(--card-w);
+  flex: 0 0 var(--card-w);
+}
+
+/* 让 card 自身撑满这个固定宽度 */
+.project-card-col .card{
+  width: 100%;
+}
