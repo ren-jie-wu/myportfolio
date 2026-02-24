@@ -10,6 +10,8 @@ const Contact = () => {
       <div className="text-center mb-5">
         <h2 className="mb-4">Contact Me</h2>
 
+        <div style={{ height: "16px" }} />
+        
         <MarkdownRenderer
           markdownText={
             "##### I'm always open to new opportunities and collaborations.\n" +

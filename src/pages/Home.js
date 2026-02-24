@@ -8,7 +8,7 @@ import Projects from "../components/Projects";
 import Experience from "../components/Experience";
 import Contact from "../components/Contact";
 import ProjectDetails from "../components/ProjectDetails";
-import EducationDetails from "../components/EducationDetails";
+import ExperienceDetails from "../components/ExperienceDetails";
 
 const Section = ({ children, fadein=true, isLastSection=false }) => {
   const [ref, inView] = useInView({
@@ -86,19 +86,19 @@ const Home = () => {
     }
   };
 
-  // Same logic for education details
-  const [showEducationDetails, setShowEducationDetails] = useState(false);
-  const [selectedEducation, setSelectedEducation] = useState(null);
-  const handleEducationDetails = (education, more, fromback = false) => {
+  // Same logic for experience details
+  const [showExperienceDetails, setShowExperienceDetails] = useState(false);
+  const [selectedExperience, setSelectedExperience] = useState(null);
+  const handleExperienceDetails = (experience, more, fromback = false) => {
     if (more) {
-      setSelectedEducation(education);
-      setShowEducationDetails(true);
-      setTimeout(() => scrollToSection("education-details"), 5);
+      setSelectedExperience(experience);
+      setShowExperienceDetails(true);
+      setTimeout(() => scrollToSection("experience-details"), 5);
     } else {
       scrollToSection("experience");
       setTimeout(() => {
-        setSelectedEducation(null);
-        setShowEducationDetails(false);
+        setSelectedExperience(null);
+        setShowExperienceDetails(false);
       }, fromback ? 550 : 0);
     }
   };
@@ -139,16 +139,16 @@ const Home = () => {
         <Element id="experience" name="experience" className="snap-section">
           <Section >
             <Experience
-              handleDisplay={handleEducationDetails}
-              selectedEducation={selectedEducation}
+              handleDisplay={handleExperienceDetails}
+              selectedExperience={selectedExperience}
             />
           </Section></Element>
-        {showEducationDetails && (
-          <Element id="education-details" name="education-details" className="snap-section">
+        {showExperienceDetails && (
+          <Element id="experience-details" name="experience-details" className="snap-section">
             <Section>
-              <EducationDetails
-                selectedEducation={selectedEducation}
-                handleDisplay={handleEducationDetails}
+              <ExperienceDetails
+                selectedExperience={selectedExperience}
+                handleDisplay={handleExperienceDetails}
               />
             </Section>
           </Element>

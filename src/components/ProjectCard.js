@@ -4,7 +4,7 @@ import { MarkdownRenderer } from "./Helper";
 const ProjectCard = ({ project, handleDisplay, selectedProject }) => {
   return (
     <div className="project-card-col" key={project.id}>
-      <div className="card h-100 shadow-sm">
+      <div className="card anim-card h-100 shadow-sm">
         <img
           src={project.icon}
           className="card-img-top"
