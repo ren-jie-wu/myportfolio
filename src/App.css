@@ -23,12 +23,15 @@ html, body {
 
 .snap-container {
   scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+  overscroll-behavior-y: contain;
+  scroll-behavior: smooth;
+  overflow-y: auto;
   height: 100%;
 }
 
 .snap-section {
-  scroll-snap-align: center;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
   min-height: 100%;
   padding: 60px;
   padding-top: 100px;
