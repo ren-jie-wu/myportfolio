@@ -364,11 +364,11 @@ footer {
 /* hero：固定 16:9 + 圆角 */
 .project-hero{
   width: 100%;
-  aspect-ratio: 16 / 9;
+  max-width: 600px;
   border-radius: 16px;
   overflow: hidden;
   background: #eee;
-  margin-bottom: 18px;
+  margin: 0 auto 18px;
 }
 
 .project-hero img{

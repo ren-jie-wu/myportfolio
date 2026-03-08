@@ -20,7 +20,7 @@ const linkedinlink = "https://www.linkedin.com/in/renjie-wu-334199325/";
 const email = "renjiewu02@gmail.com";
 
 // Projects and Experience Data
-const defaultHero = "https://placehold.co/600x400?text=Project+Demo+Screenshot";
+const defaultHero = "https://placehold.co/800x500?text=Project+Demo+Screenshot";
 
 const projects = [
   {
@@ -29,21 +29,28 @@ const projects = [
     icon: `${process.env.PUBLIC_URL}/images/kgmem.jpeg`,
     featured: false,
     tags: ['Software Development', ],
-    description: "A web application for AI-assisted **Mem**orization and retrieval of **K**nowledge in the form of **G**raphs.",
-    skills: ["Python/Flask", "JavaScript/React", "Graph RAG", "LLM API", "Full-Stack Development", "Project Management"],
+    description: "A full-stack web application for organizing, retrieving, and visualizing knowledge as graphs with LLM.",
+    skills: ["Python/Flask", "JavaScript/React", "GraphRAG", "LLM Integration", "Full-Stack Development"],
     github: "https://github.com/ren-jie-wu/KGMem",
     youtube: "https://youtu.be/bEEVs-A-M48",
-    summary: "This project addresses the challenge of managing fragmented knowledge by building a system that **organizes, queries, and visualizes knowledge as connected graphs**. By integrating LLM APIs, GraphRAG techniques, and interactive visualization tools, KGMem transforms materials into **searchable, structured networks** — empowering researchers and learners to explore insights effectively.",
-    details: "#### Motivation\n" +
-             "As a bioscience researcher, I've often wondered: how can I **remember** overwhelming amounts of knowledge? How can I **structure and connect** these ideas to better understand them and uncover new insights? And how can I **organize** this information from diverse sources to easily **retrieve** it when needed? These questions inspired KGMem — a memory assistant built to address these challenges.\n\n" +
-             "#### Challenges and Solutions\n" +
-             "1. **Efficient organization**: To handle knowledge from varied sources, KGMem allows users to create and manage **separate notebooks** for different topics or resources, rather than all in one place. This enhances retrieval efficiency, akin to [Google's NotebookLM](https://notebooklm.google), but with an added edge — leveraging **Graph RAG** for advanced knowledge storage and query.\n" +
-             "2. **Connected knowledge**: Understanding relationships between concepts can lead to new discoveries. Visualizing these connections makes learning intuitive and engaging. Unlike tools like [Neo4j](https://neo4j.com/labs/genai-ecosystem/llm-graph-builder/), which rely on rigid query languages like _Cypher_, KGMem uses LLMs for **natural language query processing** and graph techniques to uncover **semantic and structural relationships**. After researching and evaluating options, Microsoft's [GraphRAG](https://github.com/microsoft/graphrag) emerged as the ideal solution and thus is integrated into the backend.\n\n" +
-             "#### Discussion\n" +
-             "**Outcomes**: KGMem successfully delivers solutions to the outlined challenges, featuring a **user-friendly interface** and an **interactive graph visualizer** that enriches the knowledge exploration experience. Currently the project is on the stage of cloud deployment for public access to facilitate **continuous evolution** through user feedback in dev-ops loops. \n\n" +
-             "**Limitations & Future Directions**: While the project achieves its goals, areas for improvement include optimizing*graph construction **efficiency** and **efficacy** (e.g., synonym handling to avoid redundant nodes). Furthur improvements could also involve **scaling the system** for more data and **tailoring features for specific fields**.\n\n" +
-             "**Lessons Learned**: This project not only honed my skills in **full-stack development with LLM integration** and trouble-shooting, but also strengthened my ability to **lead and manage projects**. From competitive analysis to product design, I learned the value of **iterative planning**, **researching tools**, and **adapting scope**—essential skills for delivering a successful product.",
-    hero: defaultHero,
+    summary: "- Built a full-stack web app for organizing personal knowledge as connected graphs. \n" +
+             "- Integrated LLM and GraphRAG-based extraction and retrieval for natural-language querying. \n" +
+             "- Focused on end-to-end system design, usability, and iterative product scoping.", 
+    details: "##### Motivation\n" +
+             "I built KGMem to explore a question I often encounter in research and learning: how can fragmented information be turned into something more structured, connected, and easier to retrieve? Instead of treating notes and documents as isolated text, KGMem organizes them into graph-based knowledge that can be queried and visualized more naturally.\n\n" +
+    
+             "##### What I Built\n" +
+             "KGMem is a full-stack web application that supports **knowledge ingestion, organization, retrieval, and visualization**. Users can create separate notebooks for different topics, process materials into graph-structured knowledge, and interact with the results through a visual interface and natural-language queries.\n\n" +
+    
+             "##### Technical Design\n" +
+             "On the backend, I integrated **LLM-based processing** with **GraphRAG-style retrieval** to transform source materials into structured relationships and make them queryable beyond simple keyword search. On the frontend, I built an interface for notebook management and plugged in an interactive graph exploration tool, aiming to make connected knowledge easier to navigate and interpret. The project also required architectural trade-offs across usability, retrieval quality, and implementation complexity.\n\n" +
+    
+             "##### Limitations and Future Work\n" +
+             "Current limitations include graph construction quality and efficiency, especially around redundancy, synonym handling, and scaling to larger collections of documents. Future work would focus on improving graph quality, supporting larger workloads, and adapting the system for more domain-specific use cases.\n\n" +
+    
+             "##### Lessons Learned\n" +
+             "This project strengthened my skills in **full-stack development, LLM integration, troubleshooting, and product scoping**. It also taught me how to translate an open-ended idea into an end-to-end system by iterating on architecture, evaluating tools, and balancing ambition with feasibility.",
+     hero: `${process.env.PUBLIC_URL}/images/kgmem_hero.png`,
   },
   {
     id: 2,
